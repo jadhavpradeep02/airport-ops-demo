@@ -16,7 +16,9 @@ export default function LoginPage() {
     event.preventDefault();
     signIn(role);
     const from = location.state?.from;
-    navigate(from ? `${from.pathname}${from.search}${from.hash}` : '/turnaround', { replace: true });
+    navigate(from ? `${from.pathname}${from.search}${from.hash}` : '/turnaround', {
+      replace: true,
+    });
   }
 
   return (
@@ -27,8 +29,14 @@ export default function LoginPage() {
         <p>Choose a demo role to explore the application shell.</p>
         <form onSubmit={handleSubmit}>
           <label htmlFor="role">Demo role</label>
-          <select id="role" value={role} onChange={(event) => setRole(event.target.value)}>{roles.map((item) => <option key={item}>{item}</option>)}</select>
-          <button className="button" type="submit">Enter demo</button>
+          <select id="role" value={role} onChange={(event) => setRole(event.target.value)}>
+            {roles.map((item) => (
+              <option key={item}>{item}</option>
+            ))}
+          </select>
+          <button className="button" type="submit">
+            Enter demo
+          </button>
         </form>
         <small>This is a login placeholder. Demo access resets when you refresh.</small>
       </section>

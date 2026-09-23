@@ -16,6 +16,8 @@ On Windows PowerShell with script execution disabled, use `npm.cmd` instead of `
 ```sh
 npm run build
 npm run preview
+npm run format
+npm run format:check
 ```
 
 Copy `.env.example` to `.env` if you need to change the API URL. `src/api/healthApi.js` exposes `getHealth()` through the shared Axios client. It is not called automatically because this skeleton has no backend.
