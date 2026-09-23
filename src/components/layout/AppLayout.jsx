@@ -6,6 +6,7 @@ import './Layout.scss';
 
 export default function AppLayout() {
   return (
+    //comment added
     <div className="app-layout">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <Sidebar />
